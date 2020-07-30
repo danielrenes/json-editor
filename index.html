@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Editor</title>
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/css/bulma.min.css">
+    <link rel="stylesheet" href="./lib/css/hightlight.default.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./lib/js/fontawesome.all.min.js"></script>
+    <script src="./lib/js/highlight.min.js"></script>
+    <script src="./lib/js/jquery.min.js"></script>
+    <script src="./lib/js/jsoneditor.min.js"></script>
+    <script src="./functions.js"></script>
+</head>
+
+<body>
+    <div class="columns">
+        <div class="column is-10 is-offset-1">
+            <h1 class="title is-3 has-text-centered">JSON Editor</h1>
+            <p class="buttons is-centered">
+                <button id="load-schema" class="button is-info">
+                    <span class="icon is-small">
+                        <i class="fas fa-file"></i>
+                    </span>
+                    <span>Load schema</span>
+                </button>
+                <input id="schema-file-input" type="file" accept=".json" name="schema" style="display: none;" />
+                <button id="load-json" class="button is-success">
+                    <span class="icon is-small">
+                        <i class="fas fa-file"></i>
+                    </span>
+                    <span>Load JSON</span>
+                </button>
+                <input id="json-file-input" type="file" accept=".json" name="json" style="display: none;" />
+                <button id="save-json" class="button is-danger">
+                    <span class="icon is-small">
+                        <i class="fas fa-save"></i>
+                    </span>
+                    <span>Save JSON</span>
+                </button>
+            </p>
+            <div class="columns is-desktop">
+                <div class="column is-7-desktop">
+                    <div id="json-editor">
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="json-viewer">
+                        <pre><code class="json"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

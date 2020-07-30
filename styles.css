@@ -1,0 +1,32 @@
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    margin: 1rem 0;
+    height: calc(100% - 5rem);
+    width: 100%;
+}
+
+.columns {
+    height: calc(100% - 1.5rem);
+}
+
+#json-editor, #json-viewer {
+    height: 100%;
+}
+
+#json-editor {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#json-viewer > pre {
+    height: 100%;
+}
+
+#json-viewer > pre > code {
+    background-color: inherit;
+    border: none;
+}
